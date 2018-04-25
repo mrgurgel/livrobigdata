@@ -29,12 +29,13 @@ public class TwitterApp {
                 obj.put("usuario", status.getUser().getScreenName());
                 obj.put("tweet", status.getText());
 
-                try {
+                try 
+                {
                     collection.insert(obj);
-                } catch (Exception e) {
-                    System.out.println("Erro de conexão: " 
-                            + e.getMessage());
-
+                } 
+                catch (Exception e) 
+                {
+                    System.out.println("Erro de conexão" + e.getMessage());
                 }
             }      
 
